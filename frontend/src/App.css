@@ -1,0 +1,496 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080c14;
+  color: #f3f4f6;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.app-container {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, #19243a 0%, transparent 45%),
+    #080c14;
+}
+
+.navbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0c1320;
+  border-bottom: 1px solid #253149;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 27px;
+}
+
+.brand h2 {
+  font-size: 20px;
+}
+
+.nav-status {
+  color: #9daac2;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #39d98a;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.dashboard {
+  max-width: 1150px;
+  margin: auto;
+  padding: 55px 25px;
+}
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  padding: 35px;
+  background: #111b2b;
+  border: 1px solid #293750;
+  border-radius: 16px;
+}
+
+.eyebrow {
+  color: #91a9ed;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 13px;
+}
+
+.case-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 43px;
+  margin-bottom: 15px;
+}
+
+.case-description {
+  color: #aab4c7;
+  max-width: 580px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.case-info {
+  min-width: 190px;
+  display: grid;
+  gap: 20px;
+}
+
+.case-info div {
+  display: grid;
+  gap: 7px;
+}
+
+.case-info span {
+  color: #8190aa;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.case-info strong {
+  font-size: 14px;
+}
+
+.progress-section {
+  margin: 30px 0 55px;
+}
+
+.progress-section > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 13px;
+  color: #9daac0;
+  font-size: 12px;
+}
+
+.progress-section strong {
+  color: #d8e0f1;
+}
+
+.progress-track {
+  height: 7px;
+  background: #222e43;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #91a9ed;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.section {
+  margin-bottom: 55px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+}
+
+.count {
+  color: #9aabcc;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.suspect-grid,
+.clue-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.suspect-card,
+.clue-card {
+  background: #111b2b;
+  border: 1px solid #293750;
+  border-radius: 13px;
+  padding: 23px;
+  transition: 0.2s;
+}
+
+.suspect-card:hover,
+.clue-card:hover {
+  border-color: #819de8;
+  transform: translateY(-3px);
+}
+
+.suspect-avatar {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #26344d;
+  border-radius: 50%;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.suspect-card h3,
+.clue-card h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.suspect-role {
+  color: #8d9bb2;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.secondary-button,
+.clue-button {
+  width: 100%;
+  padding: 11px;
+  color: #b8c8f6;
+  background: #202e48;
+  border: 1px solid #3b4d70;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.secondary-button:hover,
+.clue-button:hover:not(:disabled) {
+  background: #30446a;
+}
+
+.clue-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.clue-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.clue-icon {
+  font-size: 25px;
+}
+
+.found,
+.hidden {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.found {
+  color: #39d98a;
+}
+
+.hidden {
+  color: #e4b66b;
+}
+
+.clue-card p {
+  color: #9daac0;
+  font-size: 12px;
+  line-height: 1.7;
+  min-height: 60px;
+  margin-bottom: 18px;
+}
+
+.clue-button:disabled {
+  color: #5fd9a0;
+  background: #142d2a;
+  border-color: #285346;
+  cursor: default;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000b;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: 35px;
+  background: #142035;
+  border: 1px solid #3b4c6b;
+  border-radius: 16px;
+}
+
+.modal h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+.statement {
+  padding: 20px;
+  color: #c3cce0;
+  background: #0b1423;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+.loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: #a9baf0;
+  background: #080c14;
+  padding: 20px;
+  text-align: center;
+}
+
+.error {
+  color: #ff8585;
+}
+
+footer {
+  padding: 25px 0;
+  border-top: 1px solid #253149;
+  color: #75839c;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+  .suspect-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .case-info {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .brand h2 {
+    font-size: 16px;
+  }
+
+  .nav-status {
+    font-size: 8px;
+  }
+
+  .dashboard {
+    padding: 30px 16px;
+  }
+
+  .case-header {
+    padding: 22px;
+  }
+
+  .case-header h1 {
+    font-size: 32px;
+  }
+
+  .suspect-grid,
+  .clue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
+
+
+.answer-card {
+  padding: 30px;
+  background: #111b2b;
+  border: 1px solid #293750;
+  border-radius: 13px;
+}
+
+.answer-card > p {
+  color: #aab4c7;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.answer-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.answer-option {
+  padding: 16px;
+  color: #dce5f8;
+  background: #202e48;
+  border: 1px solid #3b4d70;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.answer-option:hover {
+  border-color: #91a9ed;
+}
+
+.answer-option.selected {
+  background: #30446a;
+  border-color: #91a9ed;
+  color: white;
+}
+
+.answer-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  color: #09101e;
+  background: #9bb2ff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 9px;
+  line-height: 1.7;
+}
+
+.result h3 {
+  margin-bottom: 10px;
+}
+
+.result p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.result.correct {
+  background: #123329;
+  border: 1px solid #287b59;
+  color: #83e4b5;
+}
+
+.result.incorrect {
+  background: #382222;
+  border: 1px solid #874545;
+  color: #ffaaaa;
+}
+
+@media (max-width: 600px) {
+  .answer-options {
+    grid-template-columns: 1fr;
+  }
+}
